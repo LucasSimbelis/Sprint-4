@@ -1,0 +1,22 @@
+{
+    "produtos": [
+        {
+        "imagePath": "https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2cm8lMjBoYXJyeSUyMHBvdHRlcnxlbnwwfHwwfHx8MA%3D%3D&w=400",
+        "nome": "livro harry poteer",
+        "preco": 100,
+        "id": 1
+        },
+        {
+        "imagePath": "https://images.unsplash.com/photo-1605711848233-b1cfdef70cb9?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGl2cm8lMjBzZW5ob3IlMjBkb3MlMjBhbmVpc3xlbnwwfHwwfHx8MA%3D%3D&w=400",
+        "nome": "livro senhor dos aneis",
+        "preco": 200,
+        "id": 2
+        },
+        {
+        "imagePath": "https://images.unsplash.com/photo-1567011102131-cd6c4cc06072?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvc2VkJTIwYmlibGV8ZW58MHx8MHx8fDA%3D&w=400",
+        "nome": "biblia",
+        "preco": 50,
+        "id": 3
+        }
+    ]
+}

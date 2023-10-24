@@ -1,5 +1,4 @@
 import { NavigationContainer } from "@react-navigation/native";
-import Comanda from "./screens/Comanda";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Produtos from "./screens/Produtos";
 

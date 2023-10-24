@@ -1,108 +1,59 @@
-import { Image, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { Image, Text, View, StyleSheet } from 'react-native';
 
-export default function CardProduto({ produto }) {
+export default function cardPaciente({ produto }) {
     
     return (
-        <View style={styles.pedidos}>
+        <View style={styles.quadro}>
 
-            <View style={styles.cardProduto}>
+            <View style={styles.cardPaciente}>
                 <Image style={styles.thumb} source={{ uri: produto.imagePath }} />
 
-                <View style={styles.produtoData}>
-                    <Text>{produto.nome}</Text>
-                    <Text style={styles.price}>R$ {produto.preco.toFixed(2)}</Text>
+                <View style={styles.pacienteData}>
+                    <Text style={styles.age}>Nome: {produto.nome}</Text>
+                    <Text style={styles.age}>Data da consulta: {produto.data}</Text>
+                    <Text style={styles.age}>Idade: {produto.idade}</Text>
+                    <Text style={styles.age}>Resultado do escore: {produto.escore}</Text>
                 </View>
-
-                <View style={styles.spinner}>
-                    <TouchableOpacity >
-                        <Text style={styles.spinnerMinus}>-</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.spinnerValue}>0</Text>
-                    <TouchableOpacity >
-                        <Text style={styles.spinnerPlus}>+</Text>
-                    </TouchableOpacity>
-                </View>
-
+                <Image style={styles.share}   source={require('./transferir.png')} />
             </View>
-
         </View>
     )
 }
 
 
 const styles = StyleSheet.create({
-
-    box: {
-        borderColor: '#121A2C',
-        borderWidth: 1,
-        borderRadius: 4,
-        padding: 8,
-      },
-      pedidos: {
+      quadro: {
         width: '100%',
       },
-      pedidoData:{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      },
-      pedidoDataTotal: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        borderTopWidth: 1,
-      },
-      cardProduto: {
+      cardPaciente: {
         borderColor: '#121A2C55',
         borderWidth: 1,
         borderRadius: 4,
-        padding: 8,
+        padding: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         gap: 10,
         marginVertical: 5,
       },
-      produtoData: {
+      pacienteData: {
         flex: 1,
-        alignSelf: 'flex-start',
+        alignSelf: 'flex-center',
+        alignItems: 'center'
       },  
       thumb: {
-        width: 50,
-        height: 50,
+        width: 200,
+        height: 200,
         borderRadius: 4,
       },
-      price: {
-        color: '#29A035',
-        fontSize: 18,
+      share: {
+        width: 75,
+        height: 75,
+        borderRadius: 4,
       },
-      spinner: {
-        flexDirection: 'row',
-        backgroundColor: '#D9D9D9',
-        borderRadius: 999,
-      },
-      spinnerMinus: {
-        textAlign: 'center',
-        backgroundColor: '#E9E9E9',
-        borderRadius: 999,
-        width: 24,
-        height: 24,
-        lineHeight: 24,
-        fontWeight: 'bold',
-      },
-      spinnerPlus: {
-        textAlign: 'center',
-        backgroundColor: '#121A2C',
-        borderRadius: 999,
-        width: 24,
-        height: 24,
-        fontWeight: 'bold',
-        lineHeight: 24,
-        color: '#FFF',
-      },
-      spinnerValue: {
-        textAlign: 'center',
-        width: 24,
-        height: 24,
-        lineHeight: 24,
+      age: {
+        color: '#000000',
+        fontSize: 28,
       },
       scroll: {
        width: '100%',
